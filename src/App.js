@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter, Routes,Route } from "react-router-dom";
+import Menu from './Menu';            // 새로 만들 컴포넌트
+import Start from './Start';
+import Receipt from './Receipt';
+import Filter from './test/Filter';
+import './Normalize.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Menu/>} />
+                <Route path="/Start" element={<Start/>} />
+                <Route path="/Hamburger" element={<Menu/>} />
+                <Route path="/Hamburger2" element={<Menu/>} />
+                <Route path="/SIDE" element={<Menu/>} />
+                <Route path="/Beverage" element={<Menu/>} />
+                <Route path="/Receipt" element={<Receipt/>} />
+                <Route path="/test/filter" element={<Filter/>} />
+            </Routes>
+        </BrowserRouter>
+    );
+};
 export default App;

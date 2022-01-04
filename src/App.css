@@ -1,38 +1,346 @@
-.App {
+.Kiosk {
+  width: auto;
+  height: 100vh; 
+}
+
+.mc-logo {
+  display: flex;
+  margin: auto;
+  width: 800px;
+} 
+
+.mc-logo img {
+  width: 320px;
+  height: 240px;
+  margin-top: 10px;
+  left: 10px;
+}
+
+.mc-menu {
+  padding: 20px 20px;
+  margin-top: 70px;
+}
+
+.mc-menu-choice {
+  cursor: pointer;
+}
+
+.mc-menu-serch {
+  border: white;
+  background-color: white;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.menu-select {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.meun-select-choice {
+  border: 1px solid rgb(161, 157, 157);
+  margin-right: 10px;
+  padding: 8px 20px;
+  border-radius: 9%;
+  cursor: pointer;
+}
+
+
+/* ////////////////////////////// */
+
+.burger-name-container {
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.burger-head  {
+  font-size: 40px;
+  padding: 0 20px;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.burger-name-list {
+  display: inline-block;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-choice {
+  display: inline-block;
+  border-radius: 4%;
+  background-color: rgb(216, 216, 216);
+  padding: 20px 30px;
+  margin: 10px;
+}
+
+.menu-choice img {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  margin: 10px;
+}
+.menu-choice-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.menu-eng-name {
+  opacity: 0.5;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1;
+}
+
+.menu-price {
+  font-weight: 700;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.side-choice img {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+}
+
+/* /////////// */
+
+.add-menu{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.add-menu-result {
+  background-color: rgb(27, 87, 27);
+  max-height: 40vh;
+  overflow: scroll;
+  border-radius: 2%;
+  opacity: 0.9;
+  color: white;
+  width: 320px;
+  margin-top: 200px;
+  padding-top: 10px;
+  padding-bottom: 63px;
+}
+
+.add-menu-head-name {
+  text-align: center;
+}
+
+.add-menu-list-reset{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.add-menu-list-reset > .total-amount{
+  flex: 1;
+}
+
+.total-amount {
+  /* margin-right: 10px; */
+
+}
+
+/* ////////////////////////////// */
+
+.count-menu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.count-sum {
+  background-color: white;
+  max-width: 1100px;
+  height: 18vh;
+  margin: auto;
+  position: relative;
+  border-radius: 2%;
+}
+
+.button-reset {
+  position: absolute;
+  right: 0;
+  margin: 5px;
+}
+
+.result-sum-menu{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-right: 350px;
+}
+.result-sum-menu img {
+  width: 250px;
+  height: 170px;
+}
+.burger-menuname {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.calculator-number {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  margin-top: 70px;
+}
+
+.next-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.bottom-button button{
+  flex: 1;
+}
+
+
+/* 메뉴 부분 */
+ .start-screen{
+  width: auto;  
+  background-color: rgb(27, 87, 27);
+  height: 1260px;
+ }
+
+ .screen-img {
+  text-align: center;
+ }
+
+ .screen-text {
+   color: white;
+   font-weight: 400;
+   text-align: center;
+   padding: 20px;
+   font-size: 30px;
+ }
+
+ .select-choice {
+  display: flex;
+  justify-content: center;
+ }
+
+ .select-screen {
+  margin: auto;
+  position: relative;
+  margin: 20px;
+  cursor: pointer;
+ }
+
+ .select-screen img {
+  border-radius: 4%;
+  width: 328px;
+  height: 420px;
+ }
+
+ .select-text {
+  position: absolute;
+  font-size: 23px;
+  color: red;
+  font-weight: 700;
+  bottom: -18px;
+  right: 100px;
+ }
+
+ .select-language {
+   text-align: center;
+ }
+
+ .screen-text-eng {
+   color: white;
+   font-size: 30px;
+   padding: 20px;
+ }
+
+ .screen-button {
+   padding: 13px 40px;
+   margin: 10px;
+   border-radius: 10%; 
+   border-color: white;
+ }
+
+
+ /* start screen */
+
+.receipt-container {
+  width: auto;  
+  background-color: rgb(27, 87, 27);
+  height: 100vh; 
+}
+
+.receipt-head{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.receipt-name {
+  text-align: center;
+  padding: 40px;
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.order-menu {
+  text-align: center;
+  margin-right: 30px;
+  font-size: 30px;
 }
+
+ul {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+.payment {
+  text-align: center;
+  margin-right: 40px;
+  padding: 20px;
+}
+
+.payment-select {
+  color: white;
+  font-size: 35px;
+  margin-right: 40px;
+}
+
+.receipt-button {
+  padding: 13px 40px;
+  /* margin: 10px; */
+  border-radius: 10%; 
+  border-color: white; 
+  text-align: center;
+ }
+
+
+ .total {
+  text-align: center;
+  color: white;
+ }
+
+ .sum {
+   font-size: 20px;
+   font-weight: 600;
+   border: 2px solid rgb(216, 216, 216);
+   padding: 10px;
+   background-color: black;
+ }
+
+ .sum-button {
+   margin-left: 40px;
+   padding: 13px 20px;
+ }
+
